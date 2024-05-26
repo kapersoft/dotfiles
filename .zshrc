@@ -71,3 +71,4 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza --icons=always --onelin
 # Shell integrations
 eval "$(fzf --zsh)}"
 eval "$(zoxide init --cmd cd zsh)}"
+eval $(/opt/homebrew/bin/brew shellenv)
