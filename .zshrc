@@ -35,7 +35,6 @@ zinit snippet OMZP::colored-man-pages
 zinit snippet OMZP::command-not-found
 zinit snippet OMZP::composer
 zinit snippet OMZP::git
-zinit snippet OMZP::macos
 zinit snippet OMZP::node
 zinit snippet OMZP::sublime
 zinit snippet OMZP::sudo
@@ -67,6 +66,8 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --icons=always --oneline --color=always --group-directories-first $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza --icons=always --oneline --color=always --group-directories-first $realpath'
 
 # Shell integrations
 eval "$(fzf --zsh)}"
+eval "$(zoxide init --cmd cd zsh)}"
