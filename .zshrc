@@ -29,6 +29,18 @@ zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 
+# add in snippts
+zinit snippet OMZP::brew
+zinit snippet OMZP::colored-man-pages
+zinit snippet OMZP::command-not-found
+zinit snippet OMZP::composer
+zinit snippet OMZP::git
+zinit snippet OMZP::macos
+zinit snippet OMZP::node
+zinit snippet OMZP::sublime
+zinit snippet OMZP::sudo
+zinit snippet OMZP::yarn
+
 # Load zsh-completions
 autoload -U compinit && compinit
 
