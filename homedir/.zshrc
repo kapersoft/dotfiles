@@ -65,13 +65,20 @@ setopt hist_find_no_dups
 eval $(gdircolors ~/.dircolors)
 
 # Completion styling
+setopt globdots
+zstyle ':completion:*' special-dirs true
+zstyle ':completion:*' ignored-patterns '.|..|.DS_Store|**/.|**/..|**/.DS_Store|**/.git'
+zstyle ':completion:*' ignore-parents 'parent pwd directory'
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --icons=always --oneline --color=always --group-directories-first $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza --icons=always --oneline --color=always --group-directories-first $realpath'
+zstyle ':fzf-tab:*' switch-group ',' '.'
+zstyle ':fzf-tab:*' default-color $'\033[30m'
+zstyle ':fzf-tab:*' fzf-flags --color=light
 
 # Shell integrations
-eval "$(fzf --zsh)}"
-eval "$(zoxide init --cmd cd zsh)}"
-eval $(/opt/homebrew/bin/brew shellenv)
+eval "$(fzf --zsh)"
+eval "$(zoxide init --cmd cd zsh)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
