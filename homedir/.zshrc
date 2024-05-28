@@ -1,3 +1,8 @@
+# Start tmux
+if [ -z "$TMUX" ]; then
+  exec tmux new-session -A -s base
+fi
+
 # Path to the dotfiles
 export DOTFILES=${${$(readlink -f $HOME/.zshrc):a:h}:a:h}
 

@@ -75,7 +75,6 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --icons=always --oneline --color=always --group-directories-first $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza --icons=always --oneline --color=always --group-directories-first $realpath'
 zstyle ':fzf-tab:*' switch-group ',' '.'
-zstyle ':fzf-tab:*' default-color $'\033[30m'
 
 # Shell integrations
 eval "$(fzf --zsh)"

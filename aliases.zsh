@@ -61,8 +61,7 @@ alias composer="herd composer"
 alias php="herd php"
 pu()
 {
-  if [[ $# -eq 0 ]];
-  then
+  if [[ $# -eq 0 ]]; then
     herd php ./vendor/bin/phpunit --stop-on-failure;
   else
     herd php ./vendor/bin/phpunit --stop-on-failure --filter $1;
@@ -70,8 +69,7 @@ pu()
 }
 pest()
 {
-  if [[ $# -eq 0 ]];
-  then
+  if [[ $# -eq 0 ]]; then
     herd php ./vendor/bin/pest --stop-on-failure;
   else
     herd php ./vendor/bin/pest --stop-on-failure --filter $1;
@@ -81,3 +79,10 @@ alias pint="herd php -d memory_limit=-1 vendor/bin/pint"
 alias rector="herd php -d memory_limit=-1 vendor/bin/rector"
 alias phpstan="herd php -d memory_limit=-1 vendor/bin/phpstan"
 alias pestcov="herd php -d memory_limit=-1 vendor/bin/pest --type-coverage --min=100"
+
+# Tmux
+stmx() {
+  if [[ ! -n $TMUX  ]]; then
+      tmux attach -t base || tmux new-session -A -s base
+  fi
+}
