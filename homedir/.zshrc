@@ -4,6 +4,9 @@ export DOTFILES=${${$(readlink -f $HOME/.zshrc):a:h}:a:h}
 # Stow homedir
 $DOTFILES/bin/stow.zsh
 
+# Set $PATH
+source $DOTFILES/path.zsh
+
 # Init terminal
 source $DOTFILES/init.zsh
 
