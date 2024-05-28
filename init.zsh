@@ -76,7 +76,6 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --icons=always --oneline --colo
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza --icons=always --oneline --color=always --group-directories-first $realpath'
 zstyle ':fzf-tab:*' switch-group ',' '.'
 zstyle ':fzf-tab:*' default-color $'\033[30m'
-zstyle ':fzf-tab:*' fzf-flags --color=light
 
 # Shell integrations
 eval "$(fzf --zsh)"
