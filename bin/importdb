@@ -1,0 +1,10 @@
+#!/bin/zsh
+
+ssh kaper.dev "/usr/bin/mariadb-dump $1 | gzip -3 -c" > ~/temp/$1.sql.gz
+
+mysql -uroot -h127.0.01 -e "DROP DATABASE $1;" || true
+mysql -uroot -h127.0.01 -e "CREATE DATABASE $1 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+
+gunzip -c < ~/temp/$1.sql.gz | mysql -uroot -h127.0.01 $1
+
+rm ~/temp/$1.sql.gz

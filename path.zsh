@@ -23,3 +23,6 @@ add_to_path "$HOME/.composer/vendor/bin"
 # Use project specific binaries before global ones
 add_to_path "vendor/bin"
 add_to_path "node_modules/.bin"
+
+# Mysql
+add_to_path "/Users/Shared/DBngin/mysql/8.0.33/bin"
