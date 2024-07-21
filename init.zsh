@@ -43,6 +43,12 @@ zinit snippet OMZP::yarn
 # Load zsh-completions
 autoload -U compinit && compinit
 
+# Add urls in quotes
+autoload -Uz bracketed-paste-magic
+zle -N bracketed-paste bracketed-paste-magic
+autoload -Uz url-quote-magic
+zle -N self-insert url-quote-magic
+
 # Setup keybindings
 bindkey -e # emacs
 bindkey '^p' history-search-backward
