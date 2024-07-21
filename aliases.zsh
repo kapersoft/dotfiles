@@ -7,6 +7,7 @@ alias gb="git branch"
 alias gc="git fetch && git checkout"
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gs="git status"
+alias gpf="git push --force-with-lease"
 alias nah="git reset --hard;git clean -df"
 alias pop="git stash pop"
 alias prune="git fetch --prune"
@@ -16,7 +17,11 @@ alias resolve="git add . && git commit --no-edit"
 alias stash="git stash -u"
 alias uncommit="git reset HEAD^"
 alias unstage="git restore --staged ."
-alias wip="commit wip"
+alias wip="git add . && git commit -n -m wip"
+fixup() {
+  git commit --fixup="$1"
+  GIT_SEQUENCE_EDITOR=: git rebase -i --autosquash "$1"~2
+}
 
 # Directories
 alias home="cd $HOME"
@@ -39,6 +44,7 @@ alias finder="open -a 'Finder' ."
 alias dev="code . -r"
 alias ping="gping"
 alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
+alias cls="clear && printf '\e[3J'"
 
 # Eza
 alias ls="eza --icons=always --all --hyperlink --group-directories-first --classify=always --oneline"
