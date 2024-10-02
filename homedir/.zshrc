@@ -1,6 +1,7 @@
 # Start tmux
 if [ -z "$TMUX" ]; then
-  exec tmux new-session -A -s base
+  # exec tmux new-session -A -s base
+  exec tmux new-session -t base
 fi
 
 # Path to the dotfiles
