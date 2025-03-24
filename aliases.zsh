@@ -18,6 +18,7 @@ alias stash="git stash -u"
 alias uncommit="git reset HEAD^"
 alias unstage="git restore --staged ."
 alias wip="git add . && git commit -n -m wip"
+alias ninjaedit="git add . && git commit --no-verify --no-edit && git push --force-with-lease --verbose"
 fixup() {
   git commit --fixup="$1"
   GIT_SEQUENCE_EDITOR=: git rebase -i --autosquash "$1"~2
