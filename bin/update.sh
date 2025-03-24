@@ -22,9 +22,9 @@ printf "\e[1;31m\nUpdating PHP packages (composer)...\e[0m\n"
 composer global update
 printf "Done!\n"
 
-# yarn
-printf "\e[1;31m\nUpdating global npm packages...\e[0m\n"
-yarn global upgrade --latest
+# pnpm
+printf "\e[1;31m\nUpdating global pnpm packages...\e[0m\n"
+pnpm upgrade --global --latest
 printf "Done!\n"
 
 # macOs
