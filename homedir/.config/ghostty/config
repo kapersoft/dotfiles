@@ -1,0 +1,6 @@
+font-family = JetBrainsMono Nerd Font
+font-size = 18
+theme = catppuccin-frappe
+quit-after-last-window-closed = true
+confirm-close-surface = false
+clipboard-paste-protection = true
