@@ -26,3 +26,11 @@ add_to_path "node_modules/.bin"
 
 # Mysql
 add_to_path "/Users/Shared/DBngin/mysql/8.0.33/bin"
+
+# pnpm
+export PNPM_HOME="/Users/jwkaper/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
