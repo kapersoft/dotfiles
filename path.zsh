@@ -1,8 +1,8 @@
 # Add directories to the PATH and prevent to add the same directory multiple times upon shell reload.
 add_to_path() {
-  if [[ -d "$1" ]] && [[ ":$PATH:" != *":$1:"* ]]; then
-    export PATH="$1:$PATH"
-  fi
+    if [[ -d "$1" ]] && [[ ":$PATH:" != *":$1:"* ]]; then
+        export PATH="$1:$PATH"
+    fi
 }
 
 # macOS
@@ -30,7 +30,7 @@ add_to_path "/Users/Shared/DBngin/mysql/8.0.33/bin"
 # pnpm
 export PNPM_HOME="/Users/jwkaper/Library/pnpm"
 case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
+    *":$PNPM_HOME:"*) ;;
+    *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end

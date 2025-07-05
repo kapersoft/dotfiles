@@ -20,8 +20,8 @@ alias unstage="git restore --staged ."
 alias wip="git add . && git commit -n -m wip"
 alias ninjaedit="git add . && git commit --amend --no-verify --no-edit && git push --force-with-lease --verbose -vvv"
 fixup() {
-  git commit --fixup="$1"
-  GIT_SEQUENCE_EDITOR=: git rebase -i --autosquash "$1"~2
+    git commit --fixup="$1"
+    GIT_SEQUENCE_EDITOR=: git rebase -i --autosquash "$1"~2
 }
 
 # Directories
@@ -68,19 +68,19 @@ alias composer="herd composer"
 alias php="herd php"
 pu()
 {
-  if [[ $# -eq 0 ]]; then
-    herd php ./vendor/bin/phpunit --stop-on-failure;
-  else
-    herd php ./vendor/bin/phpunit --stop-on-failure --filter $1;
-  fi;
+    if [[ $# -eq 0 ]]; then
+        herd php ./vendor/bin/phpunit --stop-on-failure;
+    else
+        herd php ./vendor/bin/phpunit --stop-on-failure --filter $1;
+    fi;
 }
 pest()
 {
-  if [[ $# -eq 0 ]]; then
-    herd php ./vendor/bin/pest --stop-on-failure;
-  else
-    herd php ./vendor/bin/pest --stop-on-failure --filter $1;
-  fi;
+    if [[ $# -eq 0 ]]; then
+        herd php ./vendor/bin/pest --stop-on-failure;
+    else
+        herd php ./vendor/bin/pest --stop-on-failure --filter $1;
+    fi;
 }
 alias pint="herd php -d memory_limit=-1 vendor/bin/pint"
 alias rector="herd php -d memory_limit=-1 vendor/bin/rector"
@@ -89,7 +89,7 @@ alias pestcov="herd php -d memory_limit=-1 vendor/bin/pest --type-coverage --min
 alias grumphp="herd php vendor/bin/grumphp run"
 # Tmux
 stmx() {
-  if [[ ! -n $TMUX  ]]; then
-      tmux attach -t base || tmux new-session -A -s base
-  fi
+    if [[ ! -n $TMUX  ]]; then
+        tmux attach -t base || tmux new-session -A -s base
+    fi
 }
