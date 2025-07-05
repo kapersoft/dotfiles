@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 # brew packages
 printf "\e[1;31mUpdating brew...\e[0m\n"

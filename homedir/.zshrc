@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 # Skip when running in cursor or vscode
 if [[ "$TERM_PROGRAM" == "vscode" && ! -t 1 ]]; then
   return

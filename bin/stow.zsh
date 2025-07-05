@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 # Path to the dotfiles
 DOTFILES=$(readlink -f $0 | xargs dirname | xargs dirname)
 

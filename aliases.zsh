@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 # Git
 alias amend="git add . && git commit --amend --no-edit"
 alias commit="git add . && git commit -m"
