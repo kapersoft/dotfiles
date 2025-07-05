@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run shfmt
-        uses: mvdan/sh@v3.8.0
+        uses: mvdan/github-action-shfmt@v3
         with:
           args: -w .
       - name: Commit changes
