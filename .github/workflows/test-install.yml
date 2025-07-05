@@ -1,0 +1,28 @@
+
+name: Test Install
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-install:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install dependencies
+        run: brew install stow
+      - name: Run install script
+        run: ./install.zsh
+      - name: Verify installation
+        run: |
+          if [ ! -L "$HOME/.zshrc" ]; then
+            echo ".zshrc symlink not found!"
+            exit 1
+          fi
+          if [ ! -L "$HOME/.tmux.conf" ]; then
+            echo ".tmux.conf symlink not found!"
+            exit 1
+          fi
