@@ -1,3 +1,8 @@
+# Skip when running in cursor or vscode
+if [[ "$TERM_PROGRAM" == "vscode" && ! -t 1 ]]; then
+  return
+fi
+
 # Start tmux
 if [ -z "$TMUX" ]; then
   # exec tmux new-session -A -s base
