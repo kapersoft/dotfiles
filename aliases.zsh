@@ -86,7 +86,7 @@ alias pint="herd php -d memory_limit=-1 vendor/bin/pint"
 alias rector="herd php -d memory_limit=-1 vendor/bin/rector"
 alias phpstan="herd php -d memory_limit=-1 vendor/bin/phpstan"
 alias pestcov="herd php -d memory_limit=-1 vendor/bin/pest --type-coverage --min=100 --compact"
-
+alias grumphp="herd php vendor/bin/grumphp run"
 # Tmux
 stmx() {
   if [[ ! -n $TMUX  ]]; then
