@@ -64,4 +64,8 @@ if [[ ! $updatesNeeded =~ "No new software available" ]]; then
 else
   printf "No new software available\n"
 fi
+
+# Check if Brewfile is up-to-date
+printf "\e[1;31m\nCheck Brewfile...\e[0m\n"
+$DOTFILES/bin/check-brewfile.zsh
 printf "Done!\n"
