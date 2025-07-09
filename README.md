@@ -55,18 +55,18 @@ Dotfiles are configuration files for Unix-like systems that typically start with
 
 1. **Clone the repository** to the recommended location:
 
-   ```bash
-   git clone https://github.com/kapersoft/dotfiles.git ~/dotfiles
-   cd ~/dotfiles
-   ```
+    ```bash
+    git clone https://github.com/kapersoft/dotfiles.git ~/dotfiles
+    cd ~/dotfiles
+    ```
 
 2. **Run the install script**:
 
-   ```bash
-   ./install.zsh
-   ```
+    ```bash
+    ./install.zsh
+    ```
 
-   The install script will automatically.
+    The install script will automatically:
     - Install Homebrew if not already present
     - Install all packages defined in the Brewfile
     - Use GNU Stow to create symlinks from `~/dotfiles/homedir/` to your home directory
