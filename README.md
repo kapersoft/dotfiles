@@ -1,83 +1,198 @@
-# My Dotfiles
+# Dotfiles
 
-These are my personal dotfiles for setting up a new macOS machine. They are highly personalized to my workflow, but feel free to use them as a starting point for your own.
+Personal macOS dotfiles for a modern development environment focused on web development, Laravel/PHP, and productivity.
 
 ## What are dotfiles?
 
-Dotfiles are configuration files for various programs. They are called "dotfiles" because they are typically hidden and their filenames start with a dot (e.g., `.zshrc`, `.vimrc`).
+Dotfiles are configuration files for Unix-like systems that typically start with a dot (`.`). They store user preferences, environment settings, aliases, and other customizations that make your terminal and development environment uniquely yours. This repository manages and synchronizes these configurations across machines.
 
 ## Features
 
-* **Zsh** as the default shell, with a customized prompt using [Powerlevel10k](https://github.com/romkatv/powerlevel10k).
-* **[Zinit](https://github.com/zdharma-continuum/zinit)** for managing zsh plugins.
-* **[Homebrew](https://brew.sh/)** for managing packages.
-* **Lots of aliases** for common commands (see `aliases.zsh`).
-* **[fzf](https://github.com/junegunn/fzf)** for fuzzy finding files and history.
-* **[eza](https://github.com/eza-community/eza)** as a modern replacement for `ls`.
-* **[Herd](https://herd.laravel.com/)** for a blazing fast local development environment for PHP and Laravel.
+### 🚀 Modern Shell Setup
+
+- **Zsh** with [Powerlevel10k](https://github.com/romkatv/powerlevel10k) theme
+- [Zinit](https://github.com/zdharma-continuum/zinit) plugin manager for fast loading
+- Syntax highlighting, autosuggestions, and fuzzy tab completion
+- Rich history configuration with search capabilities
+
+### 📦 Package Management
+
+- **Homebrew** integration with automated Brewfile management
+- Pre-configured packages for development (Node.js, PHP, Git tools, etc.)
+- Mac App Store apps and VS Code extensions included
+- Brewfile validation and update scripts
+
+### ⚡ Development Tools
+
+- **Laravel & PHP** optimized with Herd integration
+- Git aliases and shortcuts for common workflows
+- tmux configuration with modern theme
+- Modern CLI replacements (eza, bat, fzf, etc.)
+
+### 🛠 Utility Scripts
+
+- `update.zsh` - Updates all packages (Homebrew, Composer, pnpm, macOS)
+- `check-brewfile.zsh` - Validates Brewfile against installed packages
+- `update-brewfile.zsh` - Automatically updates and commits Brewfile changes
+- `tag-major.zsh` / `tag-minor.zsh` - Git tagging helpers
+- `lavlog` - Colored Laravel log viewer
+- `importdb` - Database import utility
+
+### 🎨 Terminal Enhancements
+
+- Solarized color scheme with custom dircolors
+- Modern file listing with icons and git integration
+- Fuzzy finding and smart directory navigation
+- Custom prompt with git status and context
+
+## Requirements
+
+- **macOS** (tested on recent versions)
+- **Git** - For repository management
+- **Internet connection** - For downloading Homebrew and packages
 
 ## Installation
 
-1. Clone this repository to your home directory:
+1. **Clone the repository** to the recommended location:
 
-    ```bash
-    git clone https://github.com/your-username/dotfiles.git ~/.dotfiles
-    ```
+   ```bash
+   git clone https://github.com/kapersoft/dotfiles.git ~/dotfiles
+   cd ~/dotfiles
+   ```
 
-2. Run the installation script:
+2. **Run the install script**:
 
-    ```bash
-    cd ~/.dotfiles && ./install.zsh
-    ```
+   ```bash
+   ./install.zsh
+   ```
 
-The installation script will:
+   The install script will automatically.
+    - Install Homebrew if not already present
+    - Install all packages defined in the Brewfile
+    - Use GNU Stow to create symlinks from `~/dotfiles/homedir/` to your home directory
 
-* Install [Homebrew](https://brew.sh/) if it's not already installed.
-* Install the following packages with Homebrew: `stow`, `eza`, `fzf`, `zoxide`, `powerlevel10k`, `zsh-syntax-highlighting`, `zsh-completions`, `zsh-autosuggestions`, `fzf-tab`, `composer`, `herd`.
-* Install [Oh My Zsh](https://ohmyz.sh/) by running the following command:
+3. **Close your terminal and open Ghostty**
 
-    ```bash
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    ```
+   *Note: The first time you open Ghostty, it will automatically download and configure Zinit and zsh plugins. This is normal and only happens once.*
 
-* Install global composer packages.
-* Start [Herd](httpss://herd.laravel.com).
-* Stow the dotfiles to your home directory.
+## Usage
 
-## Managing Your Dotfiles
+### Daily Workflow
 
-This repository uses [GNU Stow](https://www.gnu.org/software/stow/) to manage symlinks for the configuration files. The `stow.zsh` script handles the symlinking process.
+- The configuration loads automatically when you open a new terminal
+- All aliases and functions are immediately available
+- Run `reload` to refresh the shell configuration after changes
 
-### File Structure
-
-All the files that need to be symlinked to your home directory (`$HOME`) should be placed inside the `homedir/` directory. The structure within `homedir/` should mirror the structure of your `$HOME` directory.
-
-For example:
-
-* A file at `homedir/.zshrc` will be symlinked to `~/.zshrc`.
-* A file at `homedir/.config/ghostty/config` will be symlinked to `~/.config/ghostty/config`.
-
-### Adding a New File
-
-1. Copy the configuration file you want to manage into the `homedir/` directory, preserving its path relative to your home directory.
-2. Run the stow script to create the symlink:
-
-    ```bash
-    ./bin/stow.zsh
-    ```
-
-### Updating an Existing File
-
-Simply edit the file within the `homedir/` directory. Since the file in your home directory is a symlink, the changes will be applied automatically.
-
-### Applying Changes
-
-After adding new files or moving them, run the stow script to update the symlinks:
+### Key Aliases
 
 ```bash
-./bin/stow.zsh
+# Git shortcuts
+gs          # git status
+gc          # git fetch && git checkout
+commit      # git add . && git commit -m
+amend       # git add . && git commit --amend --no-edit
+push/pull   # git push/pull with sensible defaults
+
+# Directory navigation
+projects    # cd ~/Code
+dotfiles    # cd $DOTFILES
+home        # cd $HOME
+
+# Modern CLI tools
+ls          # eza with icons and colors
+l           # detailed eza listing with git info
+tree        # eza tree view
 ```
+
+### Package Management
+
+```bash
+# Update everything
+update.zsh
+
+# Check Brewfile status
+check-brewfile.zsh
+
+# Update Brewfile with current packages
+update-brewfile.zsh
+```
+
+## File Structure
+
+```
+~/dotfiles/
+├── homedir/              # Files symlinked to home directory
+│   ├── .zshrc           # Main shell configuration
+│   ├── .tmux.conf       # Tmux configuration
+│   ├── .p10k.zsh        # Powerlevel10k theme
+│   ├── .dircolors       # Color scheme for ls/eza
+│   ├── .Brewfile        # Homebrew package definitions
+│   └── .config/         # Application configurations
+│       └── ghostty/     # Ghostty terminal config
+├── bin/                 # Utility scripts
+│   ├── stow.zsh        # Symlink management
+│   ├── update.zsh      # System update script
+│   └── check-brewfile.zsh # Brewfile validation
+├── init.zsh            # Zsh initialization (plugins, etc.)
+├── aliases.zsh         # Command aliases and functions
+├── path.zsh           # PATH management
+└── install.zsh        # Installation script
+```
+
+### Configuration Locations
+
+- **Shell**: `homedir/.zshrc` → `~/.zshrc`
+- **Terminal multiplexer**: `homedir/.tmux.conf` → `~/.tmux.conf`
+- **Package management**: `homedir/.Brewfile` → `~/.Brewfile`
+- **Colors**: `homedir/.dircolors` → `~/.dircolors`
+- **Theme**: `homedir/.p10k.zsh` → `~/.p10k.zsh`
+- **Apps**: `homedir/.config/` → `~/.config/`
+
+## Testing
+
+The repository includes GitHub Actions workflows for automated testing:
+
+### Workflows
+
+- **Test Install** (`.github/workflows/test-install.yml`):
+  - Tests installation on macOS runners
+  - Verifies symlinks are created correctly
+  - Runs on every push and pull request
+
+- **Format** (`.github/workflows/format.yml`):
+  - Auto-formats shell scripts with shfmt
+  - Commits formatting changes automatically
+
+- **Release** (`.github/workflows/release.yml`):
+  - Creates releases when version tags are pushed
+  - Triggered by tags matching `v*` pattern
+
+### Manual Testing
+
+You can test the installation locally:
+
+```bash
+# Test the install script
+./install.zsh
+
+# Verify symlinks were created
+ls -la ~ | grep dotfiles
+
+# Test that zsh loads without errors
+zsh -c "source ~/.zshrc && echo 'Configuration loaded successfully'"
+```
+
+## Contact
+
+For questions, suggestions, or issues:
+
+- **Email**: [kapersoft@gmail.com](mailto:kapersoft@gmail.com)
+- **GitHub**: Open an issue in this repository
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+*These dotfiles are personal configurations optimized for web development with PHP/Laravel. Feel free to fork and adapt them to your needs!*
