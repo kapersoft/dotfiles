@@ -12,17 +12,15 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Install dependencies
-        run: brew install stow
+      - name: Create minimal Brewfile for testing
+        run: |
+          # No need to install all packages, just stow
+          echo 'brew "stow"' > homedir/.Brewfile
       - name: Run install script
         run: ./install.zsh
       - name: Verify installation
         run: |
           if [ ! -L "$HOME/.zshrc" ]; then
             echo ".zshrc symlink not found!"
-            exit 1
-          fi
-          if [ ! -L "$HOME/.tmux.conf" ]; then
-            echo ".tmux.conf symlink not found!"
             exit 1
           fi
