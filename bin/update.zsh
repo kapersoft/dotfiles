@@ -62,6 +62,6 @@ if [[ ! $updatesNeeded =~ "No new software available" ]]; then
         done
     fi
 else
-	printf "No new software available\n"
+  printf "No new software available\n"
 fi
 printf "Done!\n"
