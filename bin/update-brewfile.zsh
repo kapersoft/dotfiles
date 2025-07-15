@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+pushd $DOTFILES
+
 # Update brewfile
 brew bundle dump --global --force --file=$DOTFILES/homedir/.Brewfile --describe
 
@@ -14,3 +16,5 @@ git add $DOTFILES/homedir/.Brewfile
 git commit -m "Update Brewfile"
 
 echo "Brewfile updated and committed. Don't forget to push the changes."
+
+popd
