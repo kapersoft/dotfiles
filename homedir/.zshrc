@@ -17,6 +17,9 @@ export DOTFILES=${${$(readlink -f $HOME/.zshrc):a:h}:a:h}
 # Stow homedir
 $DOTFILES/bin/stow.zsh
 
+# Source exports
+source $DOTFILES/exports.zsh
+
 # Set $PATH
 source $DOTFILES/path.zsh
 
