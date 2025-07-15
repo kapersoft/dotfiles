@@ -166,6 +166,8 @@ cask "visual-studio-code"
 cask "whatsapp"
 # Connect to Windows
 cask "windows-app"
+# Multiplayer code editor
+cask "zed"
 mas "1Password for Safari", id: 1569813296
 mas "AdGuard for Safari", id: 1440147259
 mas "Consent-O-Matic", id: 1606897889
