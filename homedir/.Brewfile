@@ -87,8 +87,6 @@ cask "1password-cli"
 cask "arc"
 # Open source IDE for exploring and testing APIs
 cask "bruno"
-# Anthropic's official Claude AI desktop app
-cask "claude"
 # Two-panel file manager
 cask "commander-one"
 # Write, edit, and chat about your code with AI
