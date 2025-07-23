@@ -3,11 +3,11 @@
 pushd $DOTFILES
 
 # Update brewfile
-brew bundle dump --global --force --file=$DOTFILES/homedir/.Brewfile --describe
+brew bundle dump --force --file=$DOTFILES/homedir/.Brewfile --describe
 
 # If there are no changes, exit
 if git diff --quiet --exit-code $DOTFILES/homedir/.Brewfile; then
-  echo "No changes to Brewfile."
+  echo "🙅🏼 No changes to Brewfile."
   exit 0
 fi
 
@@ -15,6 +15,7 @@ fi
 git add $DOTFILES/homedir/.Brewfile
 git commit -m "Update Brewfile"
 
-echo "Brewfile updated and committed. Don't forget to push the changes."
+echo "✅ Brewfile updated and committed"
+echo "👉🏼 Don't forget to push the changes."
 
 popd

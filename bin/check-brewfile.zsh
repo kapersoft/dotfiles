@@ -5,16 +5,18 @@
 
 set -e
 
+pushd $DOTFILES
+
 BREWFILE="$DOTFILES/homedir/.Brewfile"
 TEMP_BREWFILE=$(mktemp)
 
 # Clean up temp file on exit
 trap "rm -f $TEMP_BREWFILE" EXIT
 
-echo "Generating current brew bundle dump..."
+echo "🍺 Generating current brew bundle dump..."
 brew bundle dump --force --describe --file="$TEMP_BREWFILE"
 
-echo "Comparing with existing Brewfile..."
+echo "🤔 Comparing with existing Brewfile..."
 
 if cmp -s "$BREWFILE" "$TEMP_BREWFILE"; then
     echo "✅ Your Brewfile is up to date!"
@@ -34,3 +36,5 @@ else
 
     exit 1
 fi
+
+popd
