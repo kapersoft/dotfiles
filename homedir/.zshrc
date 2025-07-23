@@ -67,3 +67,7 @@ export HERD_PHP_74_INI_SCAN_DIR="/Users/jwkaper/Library/Application Support/Herd
 
 # Herd injected PHP 8.4 configuration.
 export HERD_PHP_84_INI_SCAN_DIR="/Users/jwkaper/Library/Application Support/Herd/config/php/84/"
+
+
+# Herd injected PHP 8.5 configuration.
+export HERD_PHP_85_INI_SCAN_DIR="/Users/jwkaper/Library/Application Support/Herd/config/php/85/"
