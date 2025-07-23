@@ -47,8 +47,6 @@ brew "ncdu"
 brew "neovim"
 # Create, run, and share large language models (LLMs)
 brew "ollama"
-# Simulation game based upon Transport Tycoon Deluxe
-brew "openttd"
 # PAM module for reattaching to the user's GUI (Aqua) session
 brew "pam-reattach"
 # Package compiler and linker metadata toolkit
@@ -126,6 +124,8 @@ cask "microsoft-office"
 cask "microsoft-teams"
 # Free and open-source RSS reader
 cask "netnewswire"
+# Open-source transport simulation game
+cask "openttd"
 # Collaboration platform for API development
 cask "postman"
 # Debug with Ray to fix problems faster
