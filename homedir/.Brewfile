@@ -124,6 +124,8 @@ cask "microsoft-office"
 cask "microsoft-teams"
 # Free and open-source RSS reader
 cask "netnewswire"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
 # Open-source transport simulation game
 cask "openttd"
 # Collaboration platform for API development
