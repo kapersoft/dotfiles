@@ -57,6 +57,8 @@ brew "pnpm"
 brew "postgresql@17"
 # Theme for zsh
 brew "powerlevel10k"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
 # Autoformat shell script source code
 brew "shfmt"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
