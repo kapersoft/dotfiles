@@ -46,7 +46,8 @@ zinit snippet OMZP::yarn
 fpath=(/Users/jwkaper/.docker/completions $fpath)
 
 # Load zsh-completions
-autoload -Uz compinit && compinit
+autoload -Uz compinit
+compinit
 
 # Add urls in quotes
 autoload -Uz bracketed-paste-magic
