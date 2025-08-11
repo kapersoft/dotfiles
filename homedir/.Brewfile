@@ -97,6 +97,8 @@ cask "cyberduck"
 cask "dbngin"
 # Voice and text chat software
 cask "discord"
+# App to build and share containerised applications and microservices
+cask "docker-desktop"
 # Emulator for x86 with DOS
 cask "dosbox"
 # Client for the Dropbox cloud storage service
