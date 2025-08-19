@@ -3,6 +3,7 @@
 # brew packages
 printf "\e[1;31mUpdating brew...\e[0m\n"
 brew update-reset
+brew update
 brew upgrade --greedy
 printf "Done!\n"
 
