@@ -1,8 +1,5 @@
 pushd $HOME/Documents/Obsidian/Remindo
 
-# Pull the latest changes from the remote repository
-git pull --rebase
-
 # Check for changes in settings only
 DOT_CHANGES=$(git status --porcelain | grep -E '^(\?\?|\ M|\M |\A |\ D|\D ) \.')
 if [[ -n $DOT_CHANGES ]]; then
@@ -23,5 +20,8 @@ if [[ $UNPUSHED_COMMITS -gt 0 ]]; then
     echo "Unpushed commits: $UNPUSHED_COMMITS"
     git push
 fi
+
+# Pull the latest changes from the remote repository
+git pull --rebase
 
 popd
