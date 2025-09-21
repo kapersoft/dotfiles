@@ -181,6 +181,7 @@ mas "iMovie", id: 408981434
 mas "Infuse", id: 1136220934
 mas "Keynote", id: 409183694
 mas "Magnet", id: 441258766
+mas "Mini Motorways", id: 1456188526
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "SponsorBlock", id: 1573461917
