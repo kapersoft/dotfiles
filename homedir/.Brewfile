@@ -25,7 +25,7 @@ brew "ffmpeg"
 brew "fpc"
 # Command-line fuzzy finder written in Go
 brew "fzf"
-# Platform built on V8 to build network applications
+# Open-source, cross-platform JavaScript runtime environment
 brew "node"
 # Interact with Google Gemini AI models from the command-line
 brew "gemini-cli"
