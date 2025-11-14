@@ -173,12 +173,10 @@ cask "windows-app"
 # Multiplayer code editor
 cask "zed"
 mas "1Password for Safari", id: 1569813296
-mas "AdGuard for Safari", id: 1440147259
 mas "Consent-O-Matic", id: 1606897889
 mas "CrystalFetch", id: 6454431289
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
-mas "Infuse", id: 1136220934
 mas "Keynote", id: 409183694
 mas "Magnet", id: 441258766
 mas "Mini Motorways", id: 1456188526
