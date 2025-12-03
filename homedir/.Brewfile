@@ -87,6 +87,8 @@ cask "1password-cli"
 cask "arc"
 # Open source IDE for exploring and testing APIs
 cask "bruno"
+# Terminal-based AI coding assistant
+cask "claude-code"
 # Two-panel file manager
 cask "commander-one"
 # Write, edit, and chat about your code with AI
