@@ -14,6 +14,12 @@ if [[ "$TERM_PROGRAM" == "vscode" && ! -t 1 ]]; then
   return
 fi
 
+# Start tmux
+if [ -z "$TMUX" ]; then
+  # exec tmux new-session -A -s base
+  exec tmux new-session -t base
+fi
+
 # Path to the dotfiles
 export DOTFILES=${${$(readlink -f $HOME/.zshrc):a:h}:a:h}
 
