@@ -110,6 +110,7 @@ cask "font-fira-code"
 cask "font-jetbrains-mono"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-meslo-lg-nerd-font"
+cask "font-quicksand"
 # GIT client
 cask "fork"
 # Terminal emulator that uses platform-native UI and GPU acceleration
