@@ -93,6 +93,8 @@ cask "claude-code"
 cask "commander-one"
 # Write, edit, and chat about your code with AI
 cask "cursor"
+# Command-line agent for Cursor
+cask "cursor-cli"
 # Server and cloud storage browser
 cask "cyberduck"
 # Database version management tool
