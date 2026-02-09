@@ -85,6 +85,8 @@ cask "1password"
 cask "1password-cli"
 # Chromium based browser
 cask "arc"
+# Tool to flash OS images to SD cards & USB drives
+cask "balenaetcher"
 # Open source IDE for exploring and testing APIs
 cask "bruno"
 # Terminal-based AI coding assistant
