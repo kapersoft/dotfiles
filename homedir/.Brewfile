@@ -151,8 +151,6 @@ cask "signal"
 cask "slack"
 # Music streaming service
 cask "spotify"
-# Create, edit, browse SQLite databases
-cask "sqlitestudio"
 # Video game digital distribution service
 cask "steam"
 # Text editor for code, markup and prose
