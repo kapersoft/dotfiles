@@ -185,8 +185,8 @@ mas "iMovie", id: 408981434
 mas "Keynote", id: 361285480
 mas "Magnet", id: 441258766
 mas "Mini Motorways", id: 1456188526
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
+mas "Numbers", id: 361304891
+mas "Pages", id: 361309726
 mas "SponsorBlock", id: 1573461917
 mas "The Unarchiver", id: 425424353
 vscode "aaron-bond.better-comments"
