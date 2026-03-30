@@ -180,6 +180,7 @@ cask "zed"
 mas "1Password for Safari", id: 1569813296
 mas "Consent-O-Matic", id: 1606897889
 mas "CrystalFetch", id: 6454431289
+mas "Flighty", id: 1358823008
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 361285480
