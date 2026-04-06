@@ -5,6 +5,7 @@ printf "\e[1;31mUpdating brew...\e[0m\n"
 brew update-reset
 brew update
 brew upgrade --greedy
+(cd /opt/homebrew/bin/ && git remote prune origin)
 printf "Done!\n"
 
 # brew cleanup
