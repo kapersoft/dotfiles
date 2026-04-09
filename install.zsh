@@ -26,6 +26,13 @@ else
     echo "No Brewfile found at $DOTFILES/homedir/.Brewfile"
 fi
 
+# tmux plugin manager (for ~/.tmux.conf TPM plugins)
+TPM_HOME="${HOME}/.tmux/plugins/tpm"
+if [[ ! -d "$TPM_HOME" ]]; then
+    mkdir -p "${HOME}/.tmux/plugins"
+    git clone --depth 1 https://github.com/tmux-plugins/tpm "$TPM_HOME"
+fi
+
 # Stow homedir
 $DOTFILES/bin/stow.zsh
 

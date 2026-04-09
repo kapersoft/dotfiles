@@ -24,3 +24,7 @@ jobs:
             echo ".zshrc symlink not found!"
             exit 1
           fi
+          if [ ! -f "$HOME/.tmux/plugins/tpm/tpm" ]; then
+            echo "TPM not installed at ~/.tmux/plugins/tpm"
+            exit 1
+          fi
