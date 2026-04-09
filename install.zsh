@@ -41,7 +41,7 @@ defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 61 '{ena
 
 # English-only keyboard: ABC (en, layout ID 252 in AppleKeyboardLayouts)
 defaults write com.apple.HIToolbox AppleEnabledInputSources -array \
-  '<dict><key>InputSourceKind</key><string>Keyboard Layout</string><key>KeyboardLayout ID</key><integer>252</integer><key>KeyboardLayout Name</key><string>ABC</string></dict>'
+    '<dict><key>InputSourceKind</key><string>Keyboard Layout</string><key>KeyboardLayout ID</key><integer>252</integer><key>KeyboardLayout Name</key><string>ABC</string></dict>'
 defaults write com.apple.HIToolbox AppleCurrentKeyboardLayoutInputSourceID -string 'com.apple.keylayout.ABC'
 defaults delete com.apple.HIToolbox AppleInputSourceHistory 2>/dev/null || true
 defaults delete com.apple.HIToolbox AppleSelectedInputSources 2>/dev/null || true
