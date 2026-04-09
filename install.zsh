@@ -33,6 +33,22 @@ if [[ ! -d "$TPM_HOME" ]]; then
     git clone --depth 1 https://github.com/tmux-plugins/tpm "$TPM_HOME"
 fi
 
+# Free ^Space and ^⌥Space (Input Sources) for apps like IDEs
+echo "Updating macOs defaults"
+# 60 = Select the previous input source; 61 = Select next source in Input menu
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 60 '{enabled = 0;}'
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 61 '{enabled = 0;}'
+
+# English-only keyboard: ABC (en, layout ID 252 in AppleKeyboardLayouts)
+defaults write com.apple.HIToolbox AppleEnabledInputSources -array \
+  '<dict><key>InputSourceKind</key><string>Keyboard Layout</string><key>KeyboardLayout ID</key><integer>252</integer><key>KeyboardLayout Name</key><string>ABC</string></dict>'
+defaults write com.apple.HIToolbox AppleCurrentKeyboardLayoutInputSourceID -string 'com.apple.keylayout.ABC'
+defaults delete com.apple.HIToolbox AppleInputSourceHistory 2>/dev/null || true
+defaults delete com.apple.HIToolbox AppleSelectedInputSources 2>/dev/null || true
+
+# Multitouch mouse (e.g. Magic Mouse): secondary click on right (TwoButtonSwapped = left)
+defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseButtonMode -string TwoButton
+
 # Stow homedir
 $DOTFILES/bin/stow.zsh
 
