@@ -32,6 +32,10 @@ source $DOTFILES/exports.zsh
 # Set $PATH
 source $DOTFILES/path.zsh
 
+# Herd injected NVM configuration (needs to be loaded before prompt init)
+export NVM_DIR="/Users/jwkaper/Library/Application Support/Herd/config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
 # Init terminal
 source $DOTFILES/init.zsh
 
@@ -43,12 +47,13 @@ if [ -f $DOTFILES/custom.zsh ]; then
     source $DOTFILES/custom.zsh
 fi
 
-
-# Herd injected NVM configuration
-export NVM_DIR="/Users/jwkaper/Library/Application Support/Herd/config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
-[[ -f "/Applications/Herd.app/Contents/Resources/config/shell/zshrc.zsh" ]] && builtin source "/Applications/Herd.app/Contents/Resources/config/shell/zshrc.zsh"
+if [[ -f "/Applications/Herd.app/Contents/Resources/config/shell/zshrc.zsh" ]]; then
+  # Herd's shell script assumes nvm is already loaded (it calls `nvm_find_nvmrc`).
+  # Guard it so shells don't error when Herd config isn't present on this machine.
+  if command -v nvm >/dev/null 2>&1 || typeset -f nvm_find_nvmrc >/dev/null 2>&1; then
+    builtin source "/Applications/Herd.app/Contents/Resources/config/shell/zshrc.zsh"
+  fi
+fi
 
 # Herd injected PHP binary.
 export PATH="/Users/jwkaper/Library/Application Support/Herd/bin/":$PATH
