@@ -49,6 +49,12 @@ defaults delete com.apple.HIToolbox AppleSelectedInputSources 2>/dev/null || tru
 # Multitouch mouse (e.g. Magic Mouse): secondary click on right (TwoButtonSwapped = left)
 defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseButtonMode -string TwoButton
 
+# Trackpad > More Gestures > Swipe between pages: Scroll Left or Right with One Finger
+defaults write -g AppleEnableSwipeNavigateWithScrolls -bool true
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerHorizSwipeGesture -int 0
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerHorizSwipeGesture -int 0
+defaults -currentHost write -g com.apple.trackpad.threeFingerHorizSwipeGesture -int 0
+
 # Stow homedir
 $DOTFILES/bin/stow.zsh
 
