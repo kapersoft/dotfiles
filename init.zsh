@@ -91,4 +91,4 @@ zstyle ':fzf-tab:*' switch-group ',' '.'
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
-eval "$(/usr/local/bin/brew shellenv)"
+eval "$("$(which brew)" shellenv)"
