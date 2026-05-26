@@ -213,4 +213,5 @@
   "workbench.tree.renderIndentGuides": "always",
   "zenMode.fullScreen": false,
   "update.mode": "silentlyApplyOnQuit",
+  "window.autoDetectColorScheme": false,
 }
