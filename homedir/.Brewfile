@@ -1,3 +1,4 @@
+tap "laravel/moat", "https://github.com/laravel/moat"
 tap "oven-sh/bun"
 # Spell checker with better logic than ispell
 brew "aspell"
@@ -77,6 +78,8 @@ brew "zoxide"
 brew "zsh-autosuggestions"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
+# security posture auditing for your github organization & repositories
+brew "laravel/moat/moat"
 # Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
 brew "oven-sh/bun/bun"
 # Password manager that keeps all passwords secure behind one password
