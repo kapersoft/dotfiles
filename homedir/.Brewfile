@@ -72,6 +72,8 @@ brew "wget"
 brew "yarn"
 # Feature-rich command-line audio/video downloader
 brew "yt-dlp"
+# Programming language for agents with explicit effects and predictable memory
+brew "zerolang"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 # Fish-like fast/unobtrusive autosuggestions for zsh
