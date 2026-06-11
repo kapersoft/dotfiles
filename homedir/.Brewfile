@@ -1,5 +1,5 @@
-tap "laravel/moat", "https://github.com/laravel/moat"
-tap "oven-sh/bun"
+tap "laravel/moat", "https://github.com/laravel/moat", trusted: true
+tap "oven-sh/bun", trusted: true
 # Spell checker with better logic than ispell
 brew "aspell"
 # Bourne-Again SHell, a UNIX command interpreter
