@@ -14,7 +14,7 @@ TEMP_BREWFILE=$(mktemp)
 trap "rm -f $TEMP_BREWFILE" EXIT
 
 echo "🍺 Generating current brew bundle dump..."
-brew bundle dump --force --describe --file="$TEMP_BREWFILE"
+brew bundle dump --force --file="$TEMP_BREWFILE"
 
 echo "🤔 Comparing with existing Brewfile..."
 

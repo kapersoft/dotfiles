@@ -3,7 +3,7 @@
 pushd $DOTFILES
 
 # Update brewfile
-brew bundle dump --force --file=$DOTFILES/homedir/.Brewfile --describe
+brew bundle dump --force --file=$DOTFILES/homedir/.Brewfile
 
 # If there are no changes, exit
 if git diff --quiet --exit-code $DOTFILES/homedir/.Brewfile; then
