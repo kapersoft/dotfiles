@@ -26,10 +26,6 @@ brew "ffmpeg"
 brew "fpc"
 # Command-line fuzzy finder written in Go
 brew "fzf"
-# Open-source, cross-platform JavaScript runtime environment
-brew "node"
-# Interact with Google Gemini AI models from the command-line
-brew "gemini-cli"
 # GitHub command-line tool
 brew "gh"
 # Syntax-highlighting pager for git and diff output
@@ -46,6 +42,8 @@ brew "mas"
 brew "ncdu"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node"
 # Create, run, and share large language models (LLMs)
 brew "ollama"
 # PAM module for reattaching to the user's GUI (Aqua) session
@@ -90,20 +88,14 @@ cask "1password"
 cask "1password-cli"
 # Chromium based browser
 cask "arc"
-# Tool to flash OS images to SD cards & USB drives
-cask "balenaetcher"
 # Open source IDE for exploring and testing APIs
 cask "bruno"
-# Terminal-based AI coding assistant
-cask "claude-code"
 # Two-panel file manager
 cask "commander-one"
 # Write, edit, and chat about your code with AI
 cask "cursor"
 # Command-line agent for Cursor
 cask "cursor-cli"
-# Server and cloud storage browser
-cask "cyberduck"
 # Database version management tool
 cask "dbngin"
 # Voice and text chat software
@@ -130,16 +122,8 @@ cask "google-chrome"
 cask "herd"
 # Free and open-source media player
 cask "iina"
-# Open-source, KeePass-client and password manager
-cask "macpass"
-# Provides updates to various Microsoft products
-cask "microsoft-auto-update"
-# Office suite
-cask "microsoft-office"
 # Meet, chat, call, and collaborate in just one place
 cask "microsoft-teams"
-# Free and open-source RSS reader
-cask "netnewswire"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
 # Open-source transport simulation game
@@ -180,8 +164,6 @@ cask "visual-studio-code"
 cask "whatsapp"
 # Connect to Windows
 cask "windows-app"
-# Multiplayer code editor
-cask "zed"
 mas "1Password for Safari", id: 1569813296
 mas "Consent-O-Matic", id: 1606897889
 mas "CrystalFetch", id: 6454431289
