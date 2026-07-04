@@ -118,6 +118,8 @@ cask "fork"
 cask "ghostty"
 # Web browser
 cask "google-chrome"
+# Speech to text application
+cask "handy"
 # Laravel and PHP development environment manager
 cask "herd"
 # Free and open-source media player
