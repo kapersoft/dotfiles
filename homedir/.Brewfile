@@ -124,6 +124,8 @@ cask "handy"
 cask "herd"
 # Free and open-source media player
 cask "iina"
+# Provides updates to various Microsoft products
+cask "microsoft-auto-update"
 # Meet, chat, call, and collaborate in just one place
 cask "microsoft-teams"
 # Knowledge base that works on top of a local folder of plain text Markdown files
