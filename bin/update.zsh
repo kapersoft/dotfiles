@@ -67,6 +67,16 @@ else
   printf "No new software available\n"
 fi
 
+# Fix cursor-agent permissions
+printf "\e[1;31m\nFix cursor-agent permissions...\e[0m\n"
+if [[ -d "$HOME/.local/share/cursor-agent" ]]; then
+  xattr -rd com.apple.quarantine "$HOME/.local/share/cursor-agent"
+fi
+if command -v cursor-agent >/dev/null; then
+  xattr -rd com.apple.quarantine "$(dirname "$(readlink -f "$(which cursor-agent)")")"
+fi
+printf "Done!\n"
+
 # Check if Brewfile is up-to-date
 printf "\e[1;31m\nCheck Brewfile...\e[0m\n"
 $DOTFILES/bin/check-brewfile.zsh
