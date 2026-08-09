@@ -18,6 +18,10 @@ else
     echo "Homebrew already installed"
 fi
 
+# Ensure GUI apps (via launchd) can find Homebrew binaries
+echo "Configuring launchctl user PATH for Homebrew..."
+sudo launchctl config user path "/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
 # Install packages from Brewfile
 if [[ -f "$DOTFILES/homedir/.Brewfile" ]]; then
     echo "Installing packages from Brewfile..."
