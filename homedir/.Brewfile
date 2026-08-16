@@ -30,6 +30,8 @@ brew "fzf"
 brew "gh"
 # Syntax-highlighting pager for git and diff output
 brew "git-delta"
+# Open-source GitLab command-line tool
+brew "glab"
 # Ping, but with a graph
 brew "gping"
 # Lazier way to manage everything docker
@@ -148,6 +150,8 @@ cask "spotify"
 cask "steam"
 # Text editor for code, markup and prose
 cask "sublime-text"
+# Minimal GUI for AI code agents
+cask "t3-code"
 # Native GUI tool for relational databases
 cask "tableplus"
 # Remote access and connectivity software focused on security
