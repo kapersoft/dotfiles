@@ -120,6 +120,8 @@ cask "fork"
 cask "ghostty"
 # Web browser
 cask "google-chrome"
+# AI teammates that work across your apps and tools
+cask "grok-bot"
 # Speech to text application
 cask "handy"
 # Laravel and PHP development environment manager
