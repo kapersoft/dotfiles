@@ -1,22 +1,13 @@
 #!/usr/bin/env zsh
 
-# Skip when not in an interactive shell
-[[ "$COMPOSER_NO_INTERACTION" == "1" ]] && return
-
 # Zsh integration for VS Code
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
 
 # Zsh integration for Cursor
 [[ "$TERM_PROGRAM" == "cursor" ]] && . "$(cursor --locate-shell-integration-path zsh)"
 
-# Skip when using VS Code
-if [[ "$TERM_PROGRAM" == "vscode" && ! -t 1 ]]; then
-  return
-fi
-
-# Start tmux
-if [ -z "$TMUX" ]; then
-  # exec tmux new-session -A -s base
+# Start tmux (only in an interactive terminal, not in IDE terminals)
+if [[ -z "$TMUX" && -o interactive && -t 1 && "$TERM_PROGRAM" != (cursor|vscode) ]]; then
   exec tmux new-session -t base
 fi
 
