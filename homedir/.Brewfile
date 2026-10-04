@@ -50,6 +50,8 @@ brew "node"
 brew "ollama"
 # PAM module for reattaching to the user's GUI (Aqua) session
 brew "pam-reattach"
+# Execute binaries from Python packages in isolated environments
+brew "pipx"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
 # Fast, disk space efficient package manager
