@@ -1,42 +1,42 @@
 {
   "[blade.php]": {
     "editor.defaultFormatter": "shufo.vscode-blade-formatter",
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": true
   },
   "[git-commit]": {
-    "editor.rulers": [72],
+    "editor.rulers": [72]
   },
   "[javascript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     "editor.formatOnSave": true,
-    "editor.tabSize": 2,
+    "editor.tabSize": 2
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": true
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[jsx]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": true
   },
   "[php]": {
     "editor.defaultFormatter": "open-southeners.laravel-pint",
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": true
   },
   "[tsx]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": true
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features",
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
-    "editor.tabSize": 2,
+    "editor.tabSize": 2
   },
   "breadcrumbs.enabled": true,
   "breadcrumbs.symbolSortOrder": "type",
@@ -48,7 +48,7 @@
   "editor.bracketPairColorization.enabled": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit",
-    "source.fixAll.sortJSON": "never",
+    "source.fixAll.sortJSON": "never"
   },
   "editor.codeLens": false,
   "editor.detectIndentation": true,
@@ -66,7 +66,7 @@
   "editor.quickSuggestions": {
     "comments": true,
     "other": true,
-    "strings": true,
+    "strings": true
   },
   "editor.quickSuggestionsDelay": 0,
   "editor.renderLineHighlight": "all",
@@ -92,13 +92,13 @@
   "files.associations": {
     "*.php": "php",
     ".php_cs": "php",
-    ".php_cs.dist": "php",
+    ".php_cs.dist": "php"
   },
   "files.autoSave": "onFocusChange",
   "files.exclude": {
     "**/.idea": true,
     // "**/node_modules": true,
-    "**/vendor": false,
+    "**/vendor": false
   },
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
@@ -107,7 +107,7 @@
     "**/.git/objects/**": true,
     "**/.git/subtree-cache/**": true,
     "**/node_modules/**": true,
-    "**/vendor": true,
+    "**/vendor": true
   },
   "git.autofetch": true,
   "git.confirmSync": false,
@@ -115,7 +115,7 @@
   "github.copilot.editor.enableAutoCompletions": true,
   "githubPullRequests.pullBranch": "never",
   "gitlens.advanced.messages": {
-    "suppressCommitNotFoundWarning": true,
+    "suppressCommitNotFoundWarning": true
   },
   "gitlens.codeLens.scopes": ["document"],
   "gitlens.keymap": "chorded",
@@ -131,7 +131,7 @@
     "**/node_modules/**",
     "**/bower_components/**",
     "**/vendor/**/{Test,test,Tests,tests}/**",
-    "dev/**",
+    "dev/**"
   ],
   "intelephense.trace.server": "verbose",
   "javascript.format.enable": true,
@@ -158,12 +158,12 @@
   "phpstan.binCommand": [
     "/Users/jwkaper/Library/Application Support/Herd/bin//herd",
     "php",
-    "vendor/bin/phpstan",
+    "vendor/bin/phpstan"
   ],
   "phpstan.singleFileMode": true,
   "prettier.resolveGlobalModules": true,
   "search.exclude": {
-    "**/node_modules": true,
+    "**/node_modules": true
   },
   "search.showLineNumbers": true,
   "security.promptForLocalFileProtocolHandling": false,
@@ -184,25 +184,25 @@
     "**/*.css",
     "**/*.scss",
     "**/*.vue",
-    "**/*.styl",
+    "**/*.styl"
   ],
   "todohighlight.isEnable": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "vscode_custom_css.imports": [
-    "file:///Users/jwkaper/.vscode/hide-title-bar.css",
+    "file:///Users/jwkaper/.vscode/hide-title-bar.css"
   ],
   "vue.server.hybridMode": "typeScriptPluginOnly",
   "window.title": "${activeEditorMedium}${separator}${rootName} ${dirty}",
   "workbench.colorCustomizations": {
     "editor.findMatchBackground": "#be1c1e",
-    "editorIndentGuide.activeBackground": "#546e7a",
+    "editorIndentGuide.activeBackground": "#546e7a"
   },
   "workbench.colorTheme": "GitHub Light Default",
   "workbench.editor.closeOnFileDelete": true,
   "workbench.editor.labelFormat": "medium",
   "workbench.editor.showTabs": "single",
   "workbench.editorAssociations": {
-    "*.mdc": "default",
+    "*.mdc": "default"
   },
   "workbench.fontAliasing": "auto",
   "workbench.iconTheme": "Monokai Pro Icons",
@@ -222,4 +222,10 @@
     "**/.forgejo/workflows/*.yml",
     "**/.forgejo/workflows/*.yaml"
   ],
+  "cursor.composer.usageSummaryDisplay": "always",
+  "cursor.composer.conversationDensity": "detailed",
+  "workbench.reduceMotion": "off",
+  "cursor.general.emailPrivacyEnabled": true,
+  "cursor.composer.queueMessageDefaultBehavior": "steer",
+  "cursor.composer.queueManualSendBehavior2": "steer"
 }
