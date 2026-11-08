@@ -57,7 +57,7 @@ brew "pkgconf"
 # Fast, disk space efficient package manager
 brew "pnpm"
 # Object-relational database system
-brew "postgresql@17"
+brew "postgresql@17", link: true
 # Theme for zsh
 brew "powerlevel10k"
 # Search tool like grep and The Silver Searcher
